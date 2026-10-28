@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@portfolio/data": "workspace:^",
-    "astro": "7.2.4"
+    "astro": "7.4.2"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",
