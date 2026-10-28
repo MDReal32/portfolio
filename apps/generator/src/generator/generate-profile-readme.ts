@@ -1,4 +1,10 @@
-import { languageLevelColors, skillBadges as SKILL_BADGES, type Portfolio, type SkillBadgeStyle } from "@portfolio/data";
+import {
+  languageLevelColors,
+  skillBadges as SKILL_BADGES,
+  type Portfolio,
+  type SkillBadgeStyle,
+  type SkillItem
+} from "@portfolio/data";
 
 export interface ProfileReadmeGeneratorOptions {
   portfolio: Portfolio;
@@ -25,7 +31,8 @@ const badge = (label: string, style: SkillBadgeStyle = DEFAULT_BADGE): string =>
 const linkBadge = (label: string, href: string, style: SkillBadgeStyle = DEFAULT_BADGE): string =>
   `[${badge(label, style)}](${href})`;
 
-const skillBadges = (skills: string[]): string => skills.map(skill => badge(skill, SKILL_BADGES[skill])).join(" ");
+const skillBadges = (skills: SkillItem[]): string =>
+  skills.map(({ name }) => badge(name, SKILL_BADGES[name])).join(" ");
 
 const languageBadge = ({ name, level }: { name: string; level: string }): string =>
   `![${name}](${badgeUrl([name, level], languageLevelColors[level] ?? "9f9f9f")})`;
