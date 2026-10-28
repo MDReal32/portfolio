@@ -168,14 +168,53 @@ export const portfolio: Portfolio = {
       roles: ["frontend", "backend"]
     },
     {
-      name: "NestJS Telegram Bot Framework",
+      name: "NestBridge",
+      start: "2026-09",
+      end: "Present",
+      tagline: "Typed client bridge that lets frontend code call NestJS controllers and GraphQL resolvers directly.",
+      highlights: [
+        "Built Vite and webpack plugins (on unplugin) that swap controller imports for generated fetch-based clients at build time.",
+        "Generated declarations from real controller signatures, so the frontend keeps full autocomplete and type checking.",
+        "Kept server code, services, and database logic out of the browser bundle entirely."
+      ],
+      stack: ["TypeScript", "NestJS", "Vite", "webpack", "GraphQL"],
+      featured: true,
+      links: [
+        { type: "github", label: "GitHub", href: "https://github.com/MDReal32/nestbridge" },
+        { type: "npm", label: "NPM", href: "https://npm.im/nestbridge" }
+      ],
+      status: "active",
+      roles: ["frontend", "backend"]
+    },
+    {
+      name: "mcpkit",
+      start: "2026-10",
+      end: "Present",
+      tagline: "Many MCP servers in one binary, each described by a JSON manifest.",
+      highlights: [
+        "Designed a manifest format and generic executor for API calls, auth, and response mapping.",
+        "Built a one-command installer (npx usemcpkit) that configures 18 AI clients without touching other config keys.",
+        "Shipped standalone binaries for 7 platforms with integrity-checked auto-update and live reload without client restarts."
+      ],
+      stack: ["TypeScript", "Node.js", "Bun", "MCP"],
+      featured: true,
+      links: [
+        { type: "github", label: "GitHub", href: "https://github.com/MDReal32/mcpkit" },
+        { type: "npm", label: "NPM", href: "https://npm.im/usemcpkit" }
+      ],
+      status: "active",
+      roles: ["backend", "devops"]
+    },
+    {
+      name: "nestjs-grammy",
       start: "2025-09",
       end: "Present",
-      tagline: "A reusable NestJS module for grammY bots with clean DI and multi-bot support.",
+      tagline: "A decorator-driven NestJS module for grammY Telegram bots with clean DI and multi-bot support.",
       highlights: [
         "Built dynamic module registration patterns (forRoot/forRootAsync) for flexible configuration.",
         "Designed decorator-based handlers and routing/explorer patterns for clear bot commands.",
-        "Supported multi-bot setups using tokens and a registry approach with strong typing."
+        "Supported multi-bot setups using tokens and a registry approach with strong typing.",
+        "Shipped a companion testing package with a mock Telegram API and Jest, Vitest, and Bun matchers."
       ],
       stack: ["TypeScript", "NestJS", "grammY"],
       featured: true,
@@ -183,8 +222,25 @@ export const portfolio: Portfolio = {
         { type: "github", label: "GitHub", href: "https://github.com/MDReal32/nestjs-grammy" },
         { type: "npm", label: "NPM", href: "https://npm.im/@mdreal/nestjs-grammy" }
       ],
-      status: "completed",
+      status: "maintained",
       roles: ["backend"]
+    },
+    {
+      name: "nextjs-server-context",
+      start: "2024-09",
+      tagline: "Type-safe server-side context for Next.js App Router layouts and pages.",
+      highlights: [
+        "Shared validated route and search params between layouts and pages without prop drilling.",
+        "Added a Zod entry point that validates params on the server before rendering.",
+        "Exposed small React wrappers and server-only getters with an ESM-ready exports map."
+      ],
+      stack: ["TypeScript", "Next.js", "React", "Zod"],
+      links: [
+        { type: "github", label: "GitHub", href: "https://github.com/MDReal32/server-context" },
+        { type: "npm", label: "NPM", href: "https://npm.im/nextjs-server-context" }
+      ],
+      status: "completed",
+      roles: ["frontend"]
     },
     {
       name: "Swiftserve",
